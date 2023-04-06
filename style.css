@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    height: 100vh;
+    background-color: rgb(177, 185, 201);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar content";
+}
+
+li{
+    list-style-type: none;
+
+}
+
+.sidebar{
+    grid-area: sidebar; 
+    padding: 3rem;
+    background-color: aqua;
+}
+
+.sidebar-logo{
+    display: flex;
+}
+
+.sidebar-nav{
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.header{
+    border: 1px solid black;
+    grid-area: header;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+   
+}
+
+.header-top{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2rem;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    width: 100%;
+}
+
+.search > #search {
+    width: min(80%, 700px); 
+}
+  
+.account{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.account .user-picture {
+    margin: 0 1rem 0 2.5rem;
+    height: 40px;
+    width: 40px;
+  }
+
+.header-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.user-profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.post-buttons{
+    display: flex;
+    gap: 3rem;
+}
+
+.content{
+    grid-area: content;
+    display: grid;
+    padding: 3rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    gap: 2rem;
+    grid-template-areas:
+      'projects announcements'
+      'projects trending';
+    overflow: auto;  
+}
+
+.projects-container{
+    grid-area: projects;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+  
+}
+
+.project{
+    border: 1px solid black;
+    background-color: white;
+    padding: 1rem;
+}
+
+.announcements{
+    background-color: white;
+    padding: .5rem;
+    padding-bottom: 4rem;
+
+}
+
+.announcements-container{
+    grid-area: announcements;
+}
+
+.announcement-item{
+    padding: 1rem 0;
+}
+
+.trending-container{
+    grid-area: trending;
+}
+
+.trending{
+    padding: 1rem;
+    background-color: white;
+}
+
+.trending-account{
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  
+}
+
+.trend{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
