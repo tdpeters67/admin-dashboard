@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
   }
+:root{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 
+}
   body{
     height: 100vh;
     background-color: rgb(177, 185, 201);
@@ -35,6 +39,17 @@ li{
     margin-top: 3rem;
 }
 
+.icon{
+    width: 25px;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+  
+
 .header{
     border: 1px solid black;
     grid-area: header;
@@ -61,6 +76,7 @@ li{
 
 .search > #search {
     width: min(80%, 700px); 
+    height: 1.5rem;
 }
   
 .account{
@@ -121,7 +137,18 @@ li{
     border: 1px solid black;
     background-color: white;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
+
+.actions {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 9rem;
+  }
 
 .announcements{
     background-color: white;
