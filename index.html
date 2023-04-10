@@ -7,13 +7,16 @@
     <title>NRSS Admin Dashboard</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
         <div class="sidebar">
             <div class="sidebar-logo">
                 <h3 class="sidebar-title">
                     <span class="icons">
-                        <img class="icon" src="/icons/view-dashboard.svg">
+                        <img class="logo-icon" src="/icons/view-dashboard.svg">
                     </span>
                     Dashboard</h3>
             </div>
@@ -108,21 +111,19 @@
                     <button class="bell">
                         <img class="icon" src="/icons/bell-ring.svg">
                     </button>
-                    <div class="user-picture">***</div>
-                    <p class="username">Morgan Oakley</p>
+                    <div class="user-picture"></div>
+                    <p class="username">The Dismemberment Plan</p>
                 </div>
             </div>
             <div class="header-bottom">
                 <div class="user-profile">
-                    <div class="user-picture">
-                       ***
-                   </div>
+                    <div class="user-picture"></div>
                     <div class="greeting">
                         <p class='hello'>
                             Hi there,
                         </p>
                         <p class="username-greeting">
-                            Morgan Oakley (@morgan)
+                            The Dismemberment Plan (@workingtitle)
                         </p>
                     </div>
                 </div>
@@ -138,8 +139,8 @@
                 <h3> Your Projects</h3>
                 <div class="projects">
                     <article class="project"> 
-                        <h3 class="project-name">Project Name</h3>
-                        <p class="project-text">Project Information Goes Here</p> 
+                        <h3 class="project-name">Find Regar Lamorte</h3>
+                        <p class="project-text">The Commissary has tasked you with finding Regar and returning him to their custody for questioning. You will be paid on his return dead or alive (although alive is much preferred) and will be given a bonus if you can find any primary documenatation regarding the reasoning and nature of his treason.  </p> 
                         <div class="actions">
                             <img class="icon" src="/icons/star-plus.svg">
                             <img class="icon" src="/icons/eye-plus.svg">
@@ -147,8 +148,8 @@
                         </div>
                     </article>
                     <article class="project"> 
-                        <h3 class="project-name">Project Name</h3>
-                        <p class="project-text">Project Information Goes Here</p>
+                        <h3 class="project-name">Jayde and Caleb</h3>
+                        <p class="project-text">Caleb the stableboy has been captured and twisted into some sort of evil follower of Jayde and her goddess Lovitar. Find Jayde and save the boy. She has captured another half-elf girl named Arwen, as well. What's Jayde up to?</p>
                         <div class="actions">
                             <img class="icon" src="/icons/star-plus.svg">
                             <img class="icon" src="/icons/eye-plus.svg">
@@ -156,8 +157,8 @@
                         </div> 
                     </article>
                     <article class="project"> 
-                        <h3 class="project-name">Project Name</h3>
-                        <p class="project-text">Project Information Goes Here</p> 
+                        <h3 class="project-name">Flik Loudstone</h3>
+                        <p class="project-text">Flik is no longer safe in Bhelenkor. He's agreed to come with you to help find Regar, as long as you get him safely to Valipakos to work with Griselde, the tinkerer that's working on getting RKY-RKN talking again.</p> 
                         <div class="actions">
                             <img class="icon" src="/icons/star-plus.svg">
                             <img class="icon" src="/icons/eye-plus.svg">
@@ -165,8 +166,8 @@
                         </div>
                     </article>
                     <article class="project"> 
-                        <h3 class="project-name">Project Name</h3>
-                        <p class="project-text">Project Information Goes Here</p> 
+                        <h3 class="project-name">The Regeneration</h3>
+                        <p class="project-text">Regar has started some kind of movement protesting the current government of Phelan--namely The Hearth and The Forge. The movement awaits the return of "The King That Was". Is this just an elaborate lie created by Regar? When the people speak of the King That Was, their eyes turn foggy with madness that you've seen before...</p> 
                         <div class="actions">
                             <img class="icon" src="/icons/star-plus.svg">
                             <img class="icon" src="/icons/eye-plus.svg">
@@ -195,20 +196,20 @@
             </div>
             <div class="announcements-container">
                 <h3>Announcements</h3>
-                <div class="announcements">
-                    <article class="announcement-item">
-                        <h5 class="announcement-title">Site Maintenance</h3>
-                        <p class="announcement-text"> Announcement Information Goes Here</p>
-                    </article>
-                    <article class="announcement-item">
-                        <h5 class="announcement-title">Site Maintenance</h3>
-                        <p class="announcement-text"> Announcement Information Goes Here</p>
-                    </article>
-                    <article class="announcement-item">
-                        <h5 class="announcement-title">Site Maintenance</h3>
-                        <p class="announcement-text"> Announcement Information Goes Here</p>
-                    </article>
-                </div>
+                <ul class="announcements">
+                    <li class="announcement-item">
+                        <h5 class="announcement-title">Meeting Day</h3>
+                        <p class="announcement-text"> We will meet this Tuesday 4/11, but will return to Mondays starting next week.</p>
+                        </li>
+                    <li class="announcement-item">
+                        <h5 class="announcement-title">Diagonal Movement</h3>
+                        <p class="announcement-text"> All diagonal movement is always 5ft.</p>
+                        </li>
+                    <li class="announcement-item">
+                        <h5 class="announcement-title">Spells and Action Economy</h3>
+                        <p class="announcement-text"> Regardless of their casting time, you can only cast one leveled spell a turn. For example, action->2nd level spell, bonus action->cantrip is okay, but action->1st level spell, bonus action->3rd level spell is not.</p>
+                        </li>
+                </ul>
             </div>
             <div class="trending-container">
                 <h3>Trending</h3>
@@ -216,29 +217,29 @@
                     <li class="trend">
                         <div class="trending-photo">***</div>
                         <div class="trending-account">
-                            <p class="trending-username">Tegan</p>
-                            <p class="trending-text">World Peace Builder</p>
+                            <p class="trending-username">Sonorus</p>
+                            <p class="trending-text">Bard Turned Thief!</p>
                         </div>
                     </li>
                     <li class="trend">
                         <div class="trending-photo">***</div>
                         <div class="trending-account">
-                            <p class="trending-username">Morgan</p>
-                            <p class="trending-text">super cool project</p>
+                            <p class="trending-username">Papa Dadi</p>
+                            <p class="trending-text">Regeneration Leader<br>The Hearth's Most Wanted List</p>
                         </div>
                     </li>
                     <li class="trend">
                         <div class="trending-photo">***</div>
                         <div class="trending-account">
-                            <p class="trending-username">kendall</p>
-                            <p class="trending-text">life changing app</p>
+                            <p class="trending-username">Flik Loudstone</p>
+                            <p class="trending-text">Bhelenkor's Most Unpopular Tinkerer Turned Traitor</p>
                         </div>
                     </li>
                     <li class="trend">
                         <div class="trending-photo">***</div>
                         <div class="trending-account">
-                            <p class="trending-username">alex</p>
-                            <p class="trending-text">no traffic maker</p>
+                            <p class="trending-username">Gwentin Haldahak</p>
+                            <p class="trending-text">Ledgermaster? More like <br>Ledger-loser!</p>
                         </div>
                     </li>
                 </ul>

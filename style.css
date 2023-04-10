@@ -2,10 +2,27 @@
     margin: 0;
     padding: 0;
   }
+
 :root{
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-
+    --text-primary: black;
+    --text-secondary: #FCF5E5			;
+    --text-other: #FAF9F6			;
+    --bg-primary:#dcfce7;
+    --bg-secondary:#4ade80;
+    --transition-speed: 1s;
+    --sidebar-color:#166534;
+    --sidebar-width: clamp(210px, 22vw, 325px);
+    --green-1: #15803d;
+    --green-2: #052e16;
+    --green-3:#bbf7d0;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --avatar1: url('https://raw.githubusercontent.com/tdpeters67/admin-dashboard/main/icons/avatar.png');
+    --transition-notSidebar: margin-left 0.4s ease-in;
+    --transition-sidebar: width 0.4s ease-in;
 }
   body{
     height: 100vh;
@@ -18,27 +35,46 @@
         "sidebar content";
 }
 
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+   }
+
 li{
     list-style-type: none;
 
 }
 
+
 .sidebar{
     grid-area: sidebar; 
     padding: 3rem;
-    background-color: aqua;
+    background-color: var(--green-1);
 }
+
+.nav-link > .icons > .icon > img{
+    width: calc(14px +.5vw);
+}
+
 
 .sidebar-logo{
     display: flex;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
 }
 
 .sidebar-nav{
     display: grid;
     gap: 1.5rem;
     margin-top: 3rem;
-}
+    color: var(--text-secondary);
+    font-size: calc(16px + .5vw);
+    padding: 1vw 0.1vw 0.1vw 0vw;
 
+}
+.logo-icon{
+    width:50px;
+}
 .icon{
     width: 25px;
 }
@@ -48,7 +84,10 @@ li{
     align-items: center;
     gap: 1rem;
 }
-  
+
+.nav-item > *{
+    cursor: pointer;
+}
 
 .header{
     border: 1px solid black;
@@ -57,8 +96,10 @@ li{
     padding-right: 5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: white;
-   
+    background-color: var(--green-3);
+    height: 10rem;
+    overflow: auto;
+    box-shadow: var(--shadow-lg);
 }
 
 .header-top{
@@ -77,12 +118,34 @@ li{
 .search > #search {
     width: min(80%, 700px); 
     height: 1.5rem;
+    outline-color: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: rgb(229, 223, 223);
+    border: .5px solid;
+    height: 2rem;
 }
+
+.search label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
   
 .account{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.bell{
+    border: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+      
 }
 
 .account .user-picture {
@@ -97,10 +160,47 @@ li{
     align-items: center;
   
 }
+
+.post-buttons button{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: var(--green-1);
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 2.3em;
+
+
+}
+
 .user-profile{
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.user-picture{
+    background: var(--avatar1) center center / cover no-repeat;
+    border-radius: 50%;
+}
+
+.user-profile .user-picture{
+    width:75px;
+    height: 75px;
+}
+
+.hello{
+    font-weight: 800;
+    padding-bottom: .5rem;
+}
+
+.username-greeting{
+    font-size: 1.6rem;
+    font-weight: 800;
 }
 
 .post-buttons{
@@ -135,10 +235,35 @@ li{
 
 .project{
     border: 1px solid black;
-    background-color: white;
+    background-color: var(--green-1);
     padding: 1rem;
     display: flex;
+    border-radius: .5rem;
     flex-direction: column;
+    border-left: 10px solid var(--green-2);
+    box-shadow: var(--shadow);
+}
+.projects{
+    padding-top: 1rem;
+}
+
+.project-name{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    color:var(--text-other);
+    -webkit-text-stroke: .2px black;
+
+}
+
+.project-text{
+    padding-left: 15px;
+    overflow: auto;
+    color:var(--text-secondary);
+    -webkit-text-stroke: .2px black;
+
+
+
 }
 
 .actions {
@@ -147,31 +272,75 @@ li{
     justify-content: flex-end;
     align-items: center;
     gap: 1.5rem;
-    margin-top: 9rem;
+    margin-top: auto;
+  }
+  .actions >*{
+    cursor: pointer;
   }
 
 .announcements{
-    background-color: white;
+    background-color: var(--green-1);
     padding: .5rem;
-    padding-bottom: 4rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+    box-shadow: var(--shadow);
+
 
 }
 
 .announcements-container{
     grid-area: announcements;
+    width:20rem;
+
+}
+
+.announcements-container h3{
+    padding-bottom: 1rem;
+
+}
+.announcement-title{
+    color: var(--text-other);
+    -webkit-text-stroke: .2px black;
+
+    
+}
+.announcement-text{
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-top:.25rem;
+    color: var(--text-secondary);
+    -webkit-text-stroke: .3px black;
+
 }
 
 .announcement-item{
     padding: 1rem 0;
+    overflow: auto;
 }
+
 
 .trending-container{
     grid-area: trending;
+    width:20rem;
+
+}
+
+.trending-container h3{
+    padding-bottom: 1rem;
+
 }
 
 .trending{
     padding: 1rem;
-    background-color: white;
+    background-color: var(--green-1);
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+    box-shadow: var(--shadow);
+
 }
 
 .trending-account{
